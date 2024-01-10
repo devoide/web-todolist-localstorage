@@ -4,6 +4,7 @@ function load_content(){
     fetchItems()
     document.getElementById("done").addEventListener("click", doneButtonClickHandler);
     document.getElementById("inputText").focus();
+    document.getElementById("deleteBtn").addEventListener("click", deleteAll)
 }
 
 function fetchItems() {
@@ -83,5 +84,9 @@ function changer(id) {
     } else {
         console.log('Item not found with id:', id);
     }
-    fetchItems()
+}
+
+function deleteAll() {
+    localStorage.removeItem('todoItems');
+    fetchItems();
 }

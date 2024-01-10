@@ -18,7 +18,11 @@ body {
     border-radius: 10px;
 }
 
-
+.aboveCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*content ---------------*/
 
 #showList {
