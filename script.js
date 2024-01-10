@@ -12,8 +12,9 @@ function fetchItems() {
     while (parentdiv.firstChild) {
         parentdiv.removeChild(parentdiv.firstChild);
     }
-    try {
+    if (localStorage.getItem('todoItems')) {
         const items = JSON.parse(localStorage.getItem('todoItems'))
+        items.reverse();
         items.forEach(item => {
             const inp = document.createElement('input');
             const lab = document.createElement('label');
@@ -43,9 +44,8 @@ function fetchItems() {
                 changer(item.id)
             });
         });
+        items.reverse();
 
-    } catch (e) {
-        console.error("Error during reading value:", e);
     }
 }
 
@@ -87,6 +87,8 @@ function changer(id) {
 }
 
 function deleteAll() {
-    localStorage.removeItem('todoItems');
-    fetchItems();
+    if (localStorage.getItem('todoItems')) {
+        localStorage.removeItem('todoItems');
+        fetchItems();
+    }
 }
