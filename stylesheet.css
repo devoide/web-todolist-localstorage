@@ -9,13 +9,15 @@ body {
     align-items: center;
 }
 
-.container > div {
-    width: 200px;
+.container > div, #addModal {
+    width: 250px;
     height: auto;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    border: solid white;
 }
+
 
 /*content ---------------*/
 
@@ -64,6 +66,32 @@ div.item-div:hover .cancelbut {
     outline: none;
 }
 
+.setBtn {
+    color: white;
+    background-color: #435585;
+    border: solid black 1px;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.setBtn:hover {
+    cursor: pointer;
+}
+
+.setinBtn{
+    color: white;
+    background-color: #435585;
+    border: solid black 1px;
+    padding: 4px;
+    border-radius: 2px;
+    width: 200px;
+    margin: 10px 0 10px 0;
+}
+
+.setinBtn:hover {
+    cursor: pointer;
+}
+
 .addItem, .title {
     font-weight: bold;
     font-size: 1.3rem;
@@ -96,3 +124,5 @@ div.item-div:hover .cancelbut {
     display: flex;
     margin: 10px 0 0 0;
 }
+
+/*-------------------*/
