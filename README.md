@@ -1,0 +1,1 @@
+Greetings and welcome to my todolist I made with localstorage, the CSS and HTML are the same as the one from todolist-sql, although the code is different. This todolist saves locally on your browser. It's just a small project I made. Thank you for passing by!
